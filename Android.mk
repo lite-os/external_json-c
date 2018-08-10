@@ -3,6 +3,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libjson
 LOCAL_PATH := $(LIBJSON_ROOT)
 LOCAL_COPY_HEADERS_TO := libjson/inc
+LOCAL_CFLAGS += -Wno-error=unused-parameter
 LOCAL_COPY_HEADERS := bits.h \
 		config.h \
 		debug.h \
