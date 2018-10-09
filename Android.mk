@@ -2,6 +2,9 @@ LIBJSON_ROOT := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libjson
 LOCAL_PATH := $(LIBJSON_ROOT)
+LOCAL_CFLAGS := -Werror -Wno-error=unused-parameter
+LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 LOCAL_COPY_HEADERS_TO := libjson/inc
 LOCAL_CFLAGS += -Wno-error=unused-parameter
 LOCAL_COPY_HEADERS := bits.h \
